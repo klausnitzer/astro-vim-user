@@ -81,5 +81,8 @@ return {
     --     ["~/%.config/foo/.*"] = "fooscript",
     --   },
     -- }
+    vim.api.nvim_exec([[
+    autocmd BufRead,BufNewFile Jenkinsfile set filetype=groovy
+    ]], false)
   end,
 }
